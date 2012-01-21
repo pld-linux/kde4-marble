@@ -7,7 +7,7 @@
 #
 Summary:	Marble
 Summary(pl.UTF-8):	Marble
-Name:		marble
+Name:		kde4-marble
 Version:	4.8.0
 Release:	1
 License:	LGPL v2
@@ -37,6 +37,7 @@ BuildRequires:	qt4-build >= %{qt_ver}
 BuildRequires:	qt4-qmake >= %{qt_ver}
 BuildRequires:	rpmbuild(macros) >= 1.293
 Obsoletes:	kde4-kdeedu-marble < 4.6.99
+Obsoletes:	marble < 4.8.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -55,6 +56,7 @@ Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	kde4-kdelibs-devel >= %{version}
 Obsoletes:	kde4-kdeedu-devel < 4.6.99
+Obsoletes:	marble-devel < 4.8.0
 
 %description devel
 This package contains Marble header files.
@@ -63,7 +65,7 @@ This package contains Marble header files.
 Pakiet zawiera pliki nagłówkowe dla Marble.
 
 %prep
-%setup -q
+%setup -q -n %{orgname}-%{version}
 
 %build
 install -d build
@@ -78,7 +80,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} -C build install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-%find_lang %{name} --with-kde
+%find_lang %{orgname} --with-kde
 
 %post -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
@@ -86,7 +88,7 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -f %{name}.lang
+%files -f %{orgname}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/marble
 %attr(755,root,root) %{_bindir}/marble-touch
