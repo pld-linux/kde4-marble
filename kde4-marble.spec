@@ -12,7 +12,7 @@ Version:	4.8.1
 Release:	1
 License:	LGPL v2
 Group:		X11/Libraries
-Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/xz/%{orgname}-%{version}.tar.xz
+Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
 # Source0-md5:	e1b73990d92d6e4d7f1799e72f885946
 URL:		http://www.kde.org/
 # leave only required ones
