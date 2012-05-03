@@ -3,17 +3,17 @@
 #
 %define         orgname     marble
 %define         _state      stable
-%define         qtver       4.8.0
+%define         qtver       4.8.1
 #
 Summary:	Marble
 Summary(pl.UTF-8):	Marble
 Name:		kde4-marble
-Version:	4.8.2
+Version:	4.8.3
 Release:	1
 License:	LGPL v2
 Group:		X11/Libraries
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
-# Source0-md5:	9048b46cf0be1959b3a82bcae9fbe010
+# Source0-md5:	4e9b84a0d29dc5734bc7f11e5855e16e
 URL:		http://www.kde.org/
 # leave only required ones
 BuildRequires:	Qt3Support-devel >= %{qt_ver}
