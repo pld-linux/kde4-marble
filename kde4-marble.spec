@@ -8,12 +8,12 @@
 Summary:	Marble
 Summary(pl.UTF-8):	Marble
 Name:		kde4-marble
-Version:	4.8.4
+Version:	4.9.0
 Release:	1
 License:	LGPL v2
 Group:		X11/Libraries
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
-# Source0-md5:	e0ac717e91ebafab970012cb6ec8936a
+# Source0-md5:	91b1c1cfd3e077cddabb3d5c391ae1f0
 URL:		http://www.kde.org/
 # leave only required ones
 BuildRequires:	Qt3Support-devel >= %{qt_ver}
@@ -104,7 +104,10 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/CrosshairsPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/EarthquakePlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/ElevationProfileFloatItem.so
-%attr(755,root,root) %{_libdir}/kde4/plugins/marble/GosmorePlugin.so
+%attr(755,root,root) %{_libdir}/kde4/plugins/marble/ElevationProfileMarker.so
+%attr(755,root,root) %{_libdir}/kde4/plugins/marble/FlightGearPositionProviderPlugin.so
+%attr(755,root,root) %{_libdir}/kde4/plugins/marble/GosmoreReverseGeocodingPlugin.so
+%attr(755,root,root) %{_libdir}/kde4/plugins/marble/GosmoreRoutingPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/GpsdPositionProviderPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/GpsInfo.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/GpxPlugin.so
@@ -114,20 +117,27 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/LatLonPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/LocalDatabasePlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/LocalOsmSearchPlugin.so
+%attr(755,root,root) %{_libdir}/kde4/plugins/marble/LogPlugin.so
+%attr(755,root,root) %{_libdir}/kde4/plugins/marble/MapQuestPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/MapScaleFloatItem.so
+%attr(755,root,root) %{_libdir}/kde4/plugins/marble/MeasureTool.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/MonavPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/NavigationFloatItem.so
-%attr(755,root,root) %{_libdir}/kde4/plugins/marble/NominatimPlugin.so
+%attr(755,root,root) %{_libdir}/kde4/plugins/marble/NominatimReverseGeocodingPlugin.so
+%attr(755,root,root) %{_libdir}/kde4/plugins/marble/NominatimSearchPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/OpenDesktopPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/OpenRouteServicePlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/OsmPlugin.so
+%attr(755,root,root) %{_libdir}/kde4/plugins/marble/OSRMPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/OverviewMap.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/Photo.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/PlacemarkPositionProviderPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/PntPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/PositionMarker.so
+%attr(755,root,root) %{_libdir}/kde4/plugins/marble/PostalCode.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/ProgressFloatItem.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/QNamNetworkPlugin.so
+%attr(755,root,root) %{_libdir}/kde4/plugins/marble/RouteSimulationPositionProviderPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/RoutingPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/RoutinoPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/SatellitesPlugin.so
