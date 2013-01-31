@@ -8,12 +8,12 @@
 Summary:	Marble
 Summary(pl.UTF-8):	Marble
 Name:		kde4-marble
-Version:	4.9.4
+Version:	4.10.0
 Release:	1
 License:	LGPL v2
 Group:		X11/Libraries
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
-# Source0-md5:	9dd1fbd04e860530b22936cc2ae3e37b
+# Source0-md5:	4d83d1420343743ee425243e301f77b8
 URL:		http://www.kde.org/
 # leave only required ones
 BuildRequires:	Qt3Support-devel >= %{qt_ver}
@@ -99,6 +99,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/plasma_runner_marble.so
 %dir %{_libdir}/kde4/plugins/marble
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/AprsPlugin.so
+%attr(755,root,root) %{_libdir}/kde4/plugins/marble/AtmospherePlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/CachePlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/CompassFloatItem.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/CrosshairsPlugin.so
@@ -106,6 +107,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/ElevationProfileFloatItem.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/ElevationProfileMarker.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/FlightGearPositionProviderPlugin.so
+%attr(755,root,root) %{_libdir}/kde4/plugins/marble/FoursquarePlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/GosmoreReverseGeocodingPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/GosmoreRoutingPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/GpsdPositionProviderPlugin.so
@@ -113,6 +115,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/GpxPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/GraticulePlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/HostipPlugin.so
+%attr(755,root,root) %{_libdir}/kde4/plugins/marble/JsonPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/KmlPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/LatLonPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/LocalDatabasePlugin.so
@@ -149,12 +152,19 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/YoursPlugin.so
 %attr(755,root,root) %ghost %{_libdir}/libmarblewidget.so.??
 %attr(755,root,root) %{_libdir}/libmarblewidget.so.*.*.*
+%{_datadir}/applications/kde4/marble_gpx.desktop
+%{_datadir}/applications/kde4/marble_kml.desktop
+%{_datadir}/applications/kde4/marble_osm.desktop
 %{_datadir}/apps/marble
 %{_desktopdir}/kde4/marble.desktop
 %{_datadir}/config.kcfg/marble.kcfg
 %{_datadir}/kde4/services/marble_part.desktop
+%{_datadir}/kde4/services/marble_part_gpx.desktop
+%{_datadir}/kde4/services/marble_part_kml.desktop
+%{_datadir}/kde4/services/marble_part_osm.desktop
 %{_datadir}/kde4/services/plasma-applet-kworldclock.desktop
 %{_datadir}/kde4/services/plasma-runner-marble.desktop
+%{_datadir}/mime/packages/geo.xml
 %{_iconsdir}/hicolor/*x*/apps/marble.png
 
 %files devel
