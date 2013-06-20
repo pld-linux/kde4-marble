@@ -9,7 +9,7 @@ Summary:	Marble
 Summary(pl.UTF-8):	Marble
 Name:		kde4-marble
 Version:	4.10.4
-Release:	1
+Release:	2
 License:	LGPL v2
 Group:		X11/Libraries
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
@@ -144,6 +144,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/RoutingPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/RoutinoPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/SatellitesPlugin.so
+%attr(755,root,root) %{_libdir}/kde4/plugins/marble/ShpPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/Speedometer.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/StarsPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/SunPlugin.so
@@ -155,6 +156,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/applications/kde4/marble_gpx.desktop
 %{_datadir}/applications/kde4/marble_kml.desktop
 %{_datadir}/applications/kde4/marble_osm.desktop
+%{_datadir}/applications/kde4/marble_shp.desktop
 %{_datadir}/apps/marble
 %{_desktopdir}/kde4/marble.desktop
 %{_datadir}/config.kcfg/marble.kcfg
@@ -162,6 +164,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/marble_part_gpx.desktop
 %{_datadir}/kde4/services/marble_part_kml.desktop
 %{_datadir}/kde4/services/marble_part_osm.desktop
+%{_datadir}/kde4/services/marble_part_shp.desktop
 %{_datadir}/kde4/services/plasma-applet-kworldclock.desktop
 %{_datadir}/kde4/services/plasma-runner-marble.desktop
 %{_datadir}/mime/packages/geo.xml
