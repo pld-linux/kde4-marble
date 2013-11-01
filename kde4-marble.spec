@@ -8,12 +8,12 @@
 Summary:	Marble
 Summary(pl.UTF-8):	Marble
 Name:		kde4-marble
-Version:	4.10.5
+Version:	4.11.3
 Release:	1
 License:	LGPL v2
 Group:		X11/Libraries
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
-# Source0-md5:	568c840dbc26e80fc1a2f6fcf9ef9016
+# Source0-md5:	8f1b385b6a8b49137f60c410b1c70986
 URL:		http://www.kde.org/
 # leave only required ones
 BuildRequires:	Qt3Support-devel >= %{qt_ver}
@@ -91,6 +91,7 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{orgname}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/marble
+%attr(755,root,root) %{_bindir}/marble-qt
 %attr(755,root,root) %{_bindir}/marble-touch
 %attr(755,root,root) %{_bindir}/routing-instructions
 %attr(755,root,root) %{_bindir}/tilecreator
@@ -98,6 +99,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/plasma_applet_worldclock.so
 %attr(755,root,root) %{_libdir}/kde4/plasma_runner_marble.so
 %dir %{_libdir}/kde4/plugins/marble
+%attr(755,root,root) %{_libdir}/kde4/plugins/marble/AnnotatePlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/AprsPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/AtmospherePlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/CachePlugin.so
@@ -118,6 +120,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/JsonPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/KmlPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/LatLonPlugin.so
+%attr(755,root,root) %{_libdir}/kde4/plugins/marble/License.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/LocalDatabasePlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/LocalOsmSearchPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/LogPlugin.so
@@ -128,6 +131,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/NavigationFloatItem.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/NominatimReverseGeocodingPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/NominatimSearchPlugin.so
+%attr(755,root,root) %{_libdir}/kde4/plugins/marble/OpenCachingComPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/OpenDesktopPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/OpenRouteServicePlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/OsmPlugin.so
@@ -135,11 +139,11 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/OverviewMap.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/Photo.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/PlacemarkPositionProviderPlugin.so
+%attr(755,root,root) %{_libdir}/kde4/plugins/marble/Pn2Plugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/PntPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/PositionMarker.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/PostalCode.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/ProgressFloatItem.so
-%attr(755,root,root) %{_libdir}/kde4/plugins/marble/QNamNetworkPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/RouteSimulationPositionProviderPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/RoutingPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/RoutinoPlugin.so
