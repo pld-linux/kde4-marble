@@ -9,7 +9,7 @@ Summary:	Marble
 Summary(pl.UTF-8):	Marble
 Name:		kde4-marble
 Version:	4.10.5
-Release:	1
+Release:	2
 License:	LGPL v2
 Group:		X11/Libraries
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
