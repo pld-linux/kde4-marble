@@ -170,7 +170,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/plasma-runner-marble.desktop
 %{_datadir}/mime/packages/geo.xml
 %{_iconsdir}/hicolor/*x*/apps/marble.png
-%{_libdir}/qt4/imports/org/kde/edu/marble
+%{_libdir}/qt4/imports/org/kde/edu
+#%{_libdir}/qt4/imports/org/kde/edu/marble
 
 %files devel
 %defattr(644,root,root,755)
