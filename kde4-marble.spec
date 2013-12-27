@@ -8,12 +8,12 @@
 Summary:	Marble
 Summary(pl.UTF-8):	Marble
 Name:		kde4-marble
-Version:	4.11.4
+Version:	4.12.0
 Release:	1
 License:	LGPL v2
 Group:		X11/Libraries
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
-# Source0-md5:	9dd9668b2f510665020ecb997025de2c
+# Source0-md5:	33f28c0c4c687b28a5b991a5c3f59119
 URL:		http://www.kde.org/
 # leave only required ones
 BuildRequires:	Qt3Support-devel >= %{qt_ver}
@@ -93,11 +93,14 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/marble
 %attr(755,root,root) %{_bindir}/marble-qt
 %attr(755,root,root) %{_bindir}/marble-touch
-%attr(755,root,root) %{_bindir}/routing-instructions
-%attr(755,root,root) %{_bindir}/tilecreator
+#%attr(755,root,root) %{_bindir}/routing-instructions
+#%attr(755,root,root) %{_bindir}/tilecreator
 %attr(755,root,root) %{_libdir}/kde4/libmarble_part.so
 %attr(755,root,root) %{_libdir}/kde4/plasma_applet_worldclock.so
 %attr(755,root,root) %{_libdir}/kde4/plasma_runner_marble.so
+%attr(755,root,root) %{_libdir}/kde4/plugins/designer/LatLonEditPlugin.so
+%attr(755,root,root) %{_libdir}/kde4/plugins/designer/MarbleNavigatorPlugin.so
+%attr(755,root,root) %{_libdir}/kde4/plugins/designer/MarbleWidgetPlugin.so
 %dir %{_libdir}/kde4/plugins/marble
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/AnnotatePlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/AprsPlugin.so
@@ -156,11 +159,13 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/YoursPlugin.so
 %attr(755,root,root) %ghost %{_libdir}/libmarblewidget.so.??
 %attr(755,root,root) %{_libdir}/libmarblewidget.so.*.*.*
-%{_datadir}/applications/kde4/marble_gpx.desktop
-%{_datadir}/applications/kde4/marble_kml.desktop
-%{_datadir}/applications/kde4/marble_osm.desktop
-%{_datadir}/apps/marble
+%{_desktopdir}/kde4/marble_gpx.desktop
+%{_desktopdir}/kde4/marble_kml.desktop
+%{_desktopdir}/kde4/marble_osm.desktop
 %{_desktopdir}/kde4/marble.desktop
+%{_desktopdir}/kde4/marble-qt.desktop
+%{_desktopdir}/kde4/marble-touch.desktop
+%{_datadir}/apps/marble
 %{_datadir}/config.kcfg/marble.kcfg
 %{_datadir}/kde4/services/marble_part.desktop
 %{_datadir}/kde4/services/marble_part_gpx.desktop
