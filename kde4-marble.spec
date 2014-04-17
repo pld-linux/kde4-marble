@@ -1,3 +1,20 @@
+# TODO:
+# -- The following OPTIONAL packages have not been found:
+#
+# * QextSerialPort , access to serial ports , <http://code.google.com/p/qextserialport/>
+#   Reading from serial port in APRS plugin
+# * quazip , reading and writing of ZIP archives , <http://quazip.sourceforge.net/>
+#   reading and displaying .kmz files
+# * libshp , reading and writing of ESRI Shapefiles (.shp) , <http://shapelib.maptools.org/>
+#   reading and displaying .shp files
+# * liblocation , position information on Maemo 5 devices , <http://maemo.org/>
+#   position information via GPS/WLAN for the Nokia N900 smartphone
+# * QtMobility , a collection of APIs and frameworks , <http://qt.digia.com/>
+#   Required for QtLocation to work
+# * QtLocation , geographical support for position and map use , <http://qt.digia.com/>
+#   position information via QtMobility QtLocation
+# * libwlocate , WLAN-based geolocation , <http://www.openwlanmap.org/>
+#   Position information based on neighboring WLAN networks
 #
 # Conditional build:
 #
@@ -8,12 +25,12 @@
 Summary:	Marble
 Summary(pl.UTF-8):	Marble
 Name:		kde4-marble
-Version:	4.12.4
+Version:	4.13.0
 Release:	1
 License:	LGPL v2
 Group:		X11/Libraries
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
-# Source0-md5:	bceda115155eae5eacda47f4c8706442
+# Source0-md5:	d16b16a1be73124c251a4d3865e184fd
 URL:		http://www.kde.org/
 # leave only required ones
 BuildRequires:	Qt3Support-devel >= %{qt_ver}
@@ -91,6 +108,7 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{orgname}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/marble
+%attr(755,root,root) %{_bindir}/marble-mobile
 %attr(755,root,root) %{_bindir}/marble-qt
 %attr(755,root,root) %{_bindir}/marble-touch
 #%attr(755,root,root) %{_bindir}/routing-instructions
@@ -108,11 +126,14 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/CachePlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/CompassFloatItem.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/CrosshairsPlugin.so
+%attr(755,root,root) %{_libdir}/kde4/plugins/marble/CycleStreetsPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/EarthquakePlugin.so
+%attr(755,root,root) %{_libdir}/kde4/plugins/marble/EclipsesPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/ElevationProfileFloatItem.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/ElevationProfileMarker.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/FlightGearPositionProviderPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/FoursquarePlugin.so
+%attr(755,root,root) %{_libdir}/kde4/plugins/marble/GpsbabelPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/GosmoreReverseGeocodingPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/GosmoreRoutingPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/GpsdPositionProviderPlugin.so
@@ -159,9 +180,14 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/YoursPlugin.so
 %attr(755,root,root) %ghost %{_libdir}/libmarblewidget.so.??
 %attr(755,root,root) %{_libdir}/libmarblewidget.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libastro.so.?
+%attr(755,root,root) %{_libdir}/libastro.so.*.*.*
+%{_desktopdir}/kde4/marble-mobile.desktop
+%{_desktopdir}/kde4/marble_geo.desktop
 %{_desktopdir}/kde4/marble_gpx.desktop
 %{_desktopdir}/kde4/marble_kml.desktop
 %{_desktopdir}/kde4/marble_osm.desktop
+%{_desktopdir}/kde4/marble_worldwind.desktop
 %{_desktopdir}/kde4/marble.desktop
 %{_desktopdir}/kde4/marble-qt.desktop
 %{_desktopdir}/kde4/marble-touch.desktop
@@ -180,6 +206,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
+%{_includedir}/astro
 %{_includedir}/marble
+%attr(755,root,root) %{_libdir}/libastro.so
 %attr(755,root,root) %{_libdir}/libmarblewidget.so
 %{_datadir}/apps/cmake/modules/FindMarble.cmake
