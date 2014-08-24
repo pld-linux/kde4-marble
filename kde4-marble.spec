@@ -25,12 +25,12 @@
 Summary:	Marble
 Summary(pl.UTF-8):	Marble
 Name:		kde4-marble
-Version:	4.13.2
+Version:	4.14.0
 Release:	1
 License:	LGPL v2
 Group:		X11/Libraries
-Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
-# Source0-md5:	a3a2ccd57d131e3e9ed1bfb3f053a9c1
+Source0:	http://download.kde.org/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
+# Source0-md5:	cbabfd67e667bafb8ad4b661fb34fad0
 URL:		http://www.kde.org/
 # leave only required ones
 BuildRequires:	Qt3Support-devel >= %{qt_ver}
@@ -114,6 +114,7 @@ rm -rf $RPM_BUILD_ROOT
 #%attr(755,root,root) %{_bindir}/routing-instructions
 #%attr(755,root,root) %{_bindir}/tilecreator
 %attr(755,root,root) %{_libdir}/kde4/libmarble_part.so
+%attr(755,root,root) %{_libdir}/kde4/marblethumbnail.so
 %attr(755,root,root) %{_libdir}/kde4/plasma_applet_worldclock.so
 %attr(755,root,root) %{_libdir}/kde4/plasma_runner_marble.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/designer/LatLonEditPlugin.so
@@ -191,12 +192,16 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/kde4/marble.desktop
 %{_desktopdir}/kde4/marble-qt.desktop
 %{_desktopdir}/kde4/marble-touch.desktop
+%{_datadir}/appdata/marble.appdata.xml
 %{_datadir}/apps/marble
 %{_datadir}/config.kcfg/marble.kcfg
 %{_datadir}/kde4/services/marble_part.desktop
 %{_datadir}/kde4/services/marble_part_gpx.desktop
 %{_datadir}/kde4/services/marble_part_kml.desktop
 %{_datadir}/kde4/services/marble_part_osm.desktop
+%{_datadir}/kde4/services/marble_thumbnail_gpx.desktop
+%{_datadir}/kde4/services/marble_thumbnail_kml.desktop
+%{_datadir}/kde4/services/marble_thumbnail_osm.desktop
 %{_datadir}/kde4/services/plasma-applet-kworldclock.desktop
 %{_datadir}/kde4/services/plasma-runner-marble.desktop
 %{_datadir}/mime/packages/geo.xml
