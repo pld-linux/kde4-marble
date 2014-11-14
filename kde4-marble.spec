@@ -25,12 +25,12 @@
 Summary:	Marble
 Summary(pl.UTF-8):	Marble
 Name:		kde4-marble
-Version:	4.14.2
+Version:	4.14.3
 Release:	1
 License:	LGPL v2
 Group:		X11/Libraries
 Source0:	http://download.kde.org/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
-# Source0-md5:	e24481d5dfcd4e3776d6503ad64f4ee7
+# Source0-md5:	c102d058423e0cee1ee964eebe6ac6c2
 URL:		http://www.kde.org/
 # leave only required ones
 BuildRequires:	Qt3Support-devel >= %{qt_ver}
