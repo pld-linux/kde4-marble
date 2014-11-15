@@ -26,7 +26,7 @@ Summary:	Marble
 Summary(pl.UTF-8):	Marble
 Name:		kde4-marble
 Version:	4.14.3
-Release:	1
+Release:	2
 License:	LGPL v2
 Group:		X11/Libraries
 Source0:	http://download.kde.org/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
@@ -173,6 +173,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/RoutingPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/RoutinoPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/SatellitesPlugin.so
+%attr(755,root,root) %{_libdir}/kde4/plugins/marble/ShpPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/Speedometer.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/StarsPlugin.so
 %attr(755,root,root) %{_libdir}/kde4/plugins/marble/SunPlugin.so
@@ -183,15 +184,16 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libmarblewidget.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libastro.so.?
 %attr(755,root,root) %{_libdir}/libastro.so.*.*.*
-%{_desktopdir}/kde4/marble-mobile.desktop
+%{_desktopdir}/kde4/marble.desktop
 %{_desktopdir}/kde4/marble_geo.desktop
 %{_desktopdir}/kde4/marble_gpx.desktop
 %{_desktopdir}/kde4/marble_kml.desktop
+%{_desktopdir}/kde4/marble-mobile.desktop
 %{_desktopdir}/kde4/marble_osm.desktop
-%{_desktopdir}/kde4/marble_worldwind.desktop
-%{_desktopdir}/kde4/marble.desktop
 %{_desktopdir}/kde4/marble-qt.desktop
+%{_desktopdir}/kde4/marble_shp.desktop
 %{_desktopdir}/kde4/marble-touch.desktop
+%{_desktopdir}/kde4/marble_worldwind.desktop
 %{_datadir}/appdata/marble.appdata.xml
 %{_datadir}/apps/marble
 %{_datadir}/config.kcfg/marble.kcfg
@@ -199,9 +201,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/marble_part_gpx.desktop
 %{_datadir}/kde4/services/marble_part_kml.desktop
 %{_datadir}/kde4/services/marble_part_osm.desktop
+%{_datadir}/kde4/services/marble_part_shp.desktop
 %{_datadir}/kde4/services/marble_thumbnail_gpx.desktop
 %{_datadir}/kde4/services/marble_thumbnail_kml.desktop
 %{_datadir}/kde4/services/marble_thumbnail_osm.desktop
+%{_datadir}/kde4/services/marble_thumbnail_shp.desktop
 %{_datadir}/kde4/services/plasma-applet-kworldclock.desktop
 %{_datadir}/kde4/services/plasma-runner-marble.desktop
 %{_datadir}/mime/packages/geo.xml
