@@ -26,7 +26,7 @@ Summary:	Marble
 Summary(pl.UTF-8):	Marble
 Name:		kde4-marble
 Version:	4.14.3
-Release:	2
+Release:	3
 License:	LGPL v2
 Group:		X11/Libraries
 Source0:	http://download.kde.org/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
@@ -53,6 +53,7 @@ BuildRequires:	pkgconfig
 BuildRequires:	qt4-build >= %{qt_ver}
 BuildRequires:	qt4-qmake >= %{qt_ver}
 BuildRequires:	rpmbuild(macros) >= 1.293
+BuildRequires:	shapelib-devel
 Obsoletes:	kde4-kdeedu-marble < 4.6.99
 Obsoletes:	marble <= 4.8.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
